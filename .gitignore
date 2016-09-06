@@ -1,0 +1,18 @@
+#OS junk files¬
+[Tt]humbs.db
+*.DS_Store
+
+# Latex junk files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.synctex.gz
+*.toc
+*.vrb

@@ -15,3 +15,5 @@
 *.synctex.gz
 *.toc
 *.vrb
+
+*.un~

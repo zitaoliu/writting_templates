@@ -1,0 +1,130 @@
+\def\year{2016}\relax
+%File: formatting-instruction.tex
+\documentclass[letterpaper]{article}
+\usepackage{aaai16}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{footnote}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{xr}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{paralist}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+
+\let\proof\relax 
+\let\endproof\relax
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newtheorem{theorem}{Theorem}
+\theoremstyle{theorem}
+
+\newtheorem{corollary}{Corollary}
+\theoremstyle{corollary}
+
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\pdfinfo{
+/Title (AAAI Title)
+/Author (Jerry Zitao Liu)}
+\setcounter{secnumdepth}{0}  
+ \begin{document}
+% The file aaai.sty is the style file for AAAI Press 
+% proceedings, working notes, and technical reports.
+%
+\title{AAAI Title}
+\author{Jerry \and Zitao Liu\\
+Pinterest, San Francisco, CA 94103}
+\maketitle
+\begin{abstract}
+\begin{quote}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{quote}
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ proident, sunt in culpa qui officia deserunt mollit anim id est laborum \cite{liu2015regularized}. 
+
+
+
+\begin{figure}[!tpbh]
+\centering
+%\includegraphics[width=0.48\textwidth] {fig/fig.pdf}
+\caption{Caption.}
+\label{fig:dvi_data}
+\end{figure}
+
+
+\begin{definition}{(\textsc{Def Name})} 
+\label{def:hts_1}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum..
+\end{definition}
+
+
+\begin{algorithm}
+\small \caption{Caption}
+\label{alg:summary}
+{INPUT:}
+\begin{compactitem}
+\item Some input
+\end{compactitem}
+{PROCEDURE:}
+\begin{algorithmic}[1]
+   \STATE // do the work
+\end{algorithmic}
+{OUTPUT:}
+  Some output.
+\renewcommand*\arraystretch{1.0}
+\end{algorithm}
+
+\begin{table}[!hptb]
+\caption{Caption.}
+\centering
+\begin{tabular}{@{}lc@{}} \toprule
+\label{tab:mape}
+Method & Val  \\ \midrule 
+Avg-MAPE & 6.61 \\   \bottomrule
+\end{tabular}
+%\end{footnotesize}
+\end{table}
+
+
+\bibliographystyle{aaai}
+\bibliography{aaai2016}
+
+
+
+\end{document}

@@ -1,0 +1,185 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%  ltexpprt.tex  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is ltexpprt.tex, an example file for use with the SIAM LaTeX2E
+% Preprint Series macros. It is designed to provide double-column output.
+% Please take the time to read the following comments, as they document
+% how to use these macros. This file can be composed and printed out for
+% use as sample output.
+
+% Any comments or questions regarding these macros should be directed to:
+%
+%                 Donna Witzleben
+%                 SIAM
+%                 3600 University City Science Center
+%                 Philadelphia, PA 19104-2688
+%                 USA
+%                 Telephone: (215) 382-9800
+%                 Fax: (215) 386-7999
+%                 e-mail: witzleben@siam.org
+
+
+% This file is to be used as an example for style only. It should not be read
+% for content.
+
+%%%%%%%%%%%%%%% PLEASE NOTE THE FOLLOWING STYLE RESTRICTIONS %%%%%%%%%%%%%%%
+
+%%  1. There are no new tags.  Existing LaTeX tags have been formatted to match
+%%     the Preprint series style.
+%%
+%%  2. You must use \cite in the text to mark your reference citations and
+%%     \bibitem in the listing of references at the end of your chapter. See
+%%     the examples in the following file. If you are using BibTeX, please
+%%     supply the bst file with the manuscript file.
+%%
+%%  3. This macro is set up for two levels of headings (\section and
+%%     \subsection). The macro will automatically number the headings for you.
+%%
+%%  5. No running heads are to be used for this volume.
+%%
+%%  6. Theorems, Lemmas, Definitions, etc. are to be double numbered,
+%%     indicating the section and the occurence of that element
+%%     within that section. (For example, the first theorem in the second
+%%     section would be numbered 2.1. The macro will
+%%     automatically do the numbering for you.
+%%
+%%  7. Figures, equations, and tables must be single-numbered.
+%%     Use existing LaTeX tags for these elements.
+%%     Numbering will be done automatically.
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\PassOptionsToPackage{english}{babel}
+\documentclass[twoside,leqno,twocolumn]{article}
+\usepackage{ltexpprt}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{url}
+\usepackage{graphicx}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{paralist}
+
+\usepackage{booktabs}
+
+\DeclareMathOperator{\vect}{vec}
+
+\begin{document}
+
+
+%\setcounter{chapter}{2} % If you are doing your chapter as chapter one,
+%\setcounter{section}{3} % comment these two lines out.
+
+\title{\Large SDM Title}
+\author{Jerry\thanks{Pinterest, San Francisco CA USA. Email: abc@gmail.com} \\
+\and
+Zitao Liu$^*$}
+\date{}
+
+\maketitle
+
+
+%\pagenumbering{arabic}
+%\setcounter{page}{1}%Leave this line commented out.
+
+\begin{abstract} \small\baselineskip=9pt 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+
+\section{Introduction}
+\label{sec:intro}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \cite{liu2015regularized}.
+
+\begin{algorithm}[!bpht]
+\small \caption{Caption.}
+\label{alg:summary}
+{INPUT:}
+\begin{compactitem}
+\item Some input
+\end{compactitem}
+{PROCEDURE:}
+\begin{algorithmic}[1]
+\STATE // Comment
+\REPEAT
+   \STATE Update 
+   \FOR{m: 1 $\rightarrow$ N}
+   		\STATE Update.
+   		\FOR{t: 2 $\rightarrow$ $T_m-1$}
+   				\STATE Update.
+   		\ENDFOR
+   		\STATE Update.
+   \ENDFOR
+\UNTIL{Convergence}
+\STATE // Optimize
+\STATE Compute.
+\end{algorithmic}
+{OUTPUT:}
+\begin{compactitem}
+\item Some output.
+\end{compactitem}
+\renewcommand*\arraystretch{1.0}
+\end{algorithm}
+
+
+
+\begin{theorem}
+\label{thm:lip}
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{theorem}
+
+\begin{proof}
+The proof of this theorem appears in the supplemental material.
+\end{proof}
+
+\begin{figure}[!htbp]
+\centering
+%\includegraphics[width=0.45\textwidth]{fig/fig.pdf}
+\caption{Predictions for flour price series in Buffalo.}
+\label{fig:flour_buffalo}
+\end{figure}
+
+
+
+\begin{table}[!hptb]
+\caption{Average-MAPE results on \emph{clinical} dataset.}
+\centering
+\begin{tabular}{@{}lccccc@{}} \toprule
+\label{tab:clinical_mape}
+  \#  of states & 10 & 15  & 20 & 25 & 30   \\ \midrule
+Spectral & 6.29 & 6.24 & 6.32 & 6.04 & 6.00  \\
+EM & 3.97 & 3.54 & 3.54 & 3.53 & 3.53  \\
+gLDS-ridge & 3.22 & 3.21 & 3.21 & 3.21 & 3.21  \\
+gLDS-smooth & \textbf{3.21} & \textbf{3.20} & \textbf{3.20} & \textbf{3.19} & \textbf{3.19}  \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+\bibliographystyle{siam}
+\bibliography{bib/sdm}
+
+
+\end{document}
+
+% End of ltexpprt.tex
